@@ -7,7 +7,7 @@ function generateImage() {
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
     const image = new Image();
-    image.src = 'background.jpg';
+    image.src = 'background.jpg';  // Ensure the correct path if the image is in the same directory
 
     image.onload = function() {
         canvas.width = image.width;
@@ -18,12 +18,15 @@ function generateImage() {
         ctx.font = 'bold 24px Arial';
         ctx.textAlign = 'center';
 
-        // Draw text in separate lines
+        // Assuming the white line is at approximately 2/3 of the image height
+        const startY = image.height * 0.67;
         const lineHeight = 40;
-        ctx.fillText(`NAME: ${name}`, canvas.width / 2, canvas.height / 4);
-        ctx.fillText(`BLOOD GROUP: ${bloodGroup}`, canvas.width / 2, canvas.height / 4 + lineHeight);
-        ctx.fillText(`ADDRESS: ${address}`, canvas.width / 2, canvas.height / 4 + 2 * lineHeight);
-        ctx.fillText(`EMERGENCY NUMBER: ${emergencyNumber}`, canvas.width / 2, canvas.height / 4 + 3 * lineHeight);
+
+        // Draw text in separate lines below the white line
+        ctx.fillText(`NAME: ${name}`, canvas.width / 2, startY);
+        ctx.fillText(`BLOOD GROUP: ${bloodGroup}`, canvas.width / 2, startY + lineHeight);
+        ctx.fillText(`ADDRESS: ${address}`, canvas.width / 2, startY + 2 * lineHeight);
+        ctx.fillText(`EMERGENCY NUMBER: ${emergencyNumber}`, canvas.width / 2, startY + 3 * lineHeight);
 
         // Ensure download works on mobile
         canvas.toBlob(function(blob) {
