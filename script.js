@@ -18,10 +18,10 @@ function generateImage() {
         ctx.font = 'bold 24px Arial';
         ctx.textAlign = 'center';
         
-        ctx.fillText(`Name: ${name.toUpperCase()}`, canvas.width / 2, canvas.height / 4);
-        ctx.fillText(`Blood Group: ${bloodGroup.toUpperCase()}`, canvas.width / 2, canvas.height / 3);
-        ctx.fillText(`Address: ${address.toUpperCase()}`, canvas.width / 2, canvas.height / 2.4);
-        ctx.fillText(`Emergency Number: ${emergencyNumber}`, canvas.width / 2, canvas.height / 2);
+        ctx.fillText(`NAME: ${name}`, canvas.width / 2, canvas.height / 4);
+        ctx.fillText(`BLOOD GROUP: ${bloodGroup}`, canvas.width / 2, canvas.height / 3);
+        ctx.fillText(`ADDRESS: ${address}`, canvas.width / 2, canvas.height / 2.4);
+        ctx.fillText(`EMERGENCY NUMBER: ${emergencyNumber}`, canvas.width / 2, canvas.height / 2);
 
         const link = document.createElement('a');
         link.download = 'wallpaper.png';
