@@ -15,7 +15,7 @@ function generateImage() {
         ctx.drawImage(image, 0, 0);
 
         ctx.fillStyle = 'white';
-        ctx.font = 'bold 24px Arial';
+        ctx.font = 'bold 34px Arial';
         ctx.textAlign = 'center';
 
         // Assuming the white line is at approximately 2/3 of the image height
