@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Text Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name">
+            <label for="bloodGroup">Blood Group:</label>
+            <input type="text" id="bloodGroup" placeholder="Enter your blood group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" placeholder="Enter your address">
+            <label for="emergencyNumber">Emergency Number:</label>
+            <input type="text" id="emergencyNumber" placeholder="Enter emergency number">
+            <button onclick="generateImage()">Download Wallpaper</button>
+        </div>
+        <canvas id="canvas" style="display:none;"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
