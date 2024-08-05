@@ -5,7 +5,10 @@ body {
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-image: url('background.jpg'); /* Add this line */
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-repeat: no-repeat;
+    background-position: center; /* Centers the background image */
 }
 
 .container {
